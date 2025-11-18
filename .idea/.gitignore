@@ -1,0 +1,10 @@
+# Default ignored files
+/../../NotesApp./.idea/shelf/
+/../../NotesApp./.idea/workspace.xml
+# Editor-based HTTP Client requests
+/../../NotesApp./.idea/httpRequests/
+# Environment-dependent path to Maven home directory
+/../../NotesApp./.idea/mavenHomeManager.xml
+# Datasource local storage ignored files
+/../../NotesApp./.idea/dataSources/
+/../../NotesApp./.idea/dataSources.local.xml
