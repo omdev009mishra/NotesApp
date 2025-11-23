@@ -39,5 +39,10 @@ public class AutoSaveManager extends Thread {
     public void stopAutoSave() {
         running = false;
         interrupt();
+        try {
+            join(5000); // Wait up to 5 seconds for thread to finish
+        } catch (InterruptedException e) {
+            System.err.println("Error waiting for auto-save thread to stop: " + e.getMessage());
+        }
     }
 }

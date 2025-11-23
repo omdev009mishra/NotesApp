@@ -24,6 +24,9 @@ public class TextNote extends Note {
     
     @Override
     public void setContent(String content) {
+        if (content == null) {
+            throw new IllegalArgumentException("Content cannot be null");
+        }
         this.content = content;
         this.modifiedDate = new Date();
     }

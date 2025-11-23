@@ -220,7 +220,9 @@ public class NoteDAO implements DatabaseOperations<Note> {
         
         if ("TEXT".equals(type)) {
             String content = rs.getString("content");
-            return new TextNote(id, title, content != null ? content : "", createdDate, modifiedDate);
+            // Use empty string if content is null
+            String safeContent = (content != null) ? content : "";
+            return new TextNote(id, title, safeContent, createdDate, modifiedDate);
         } else if ("DRAWING".equals(type)) {
             byte[] imageData = rs.getBytes("image_data");
             return new DrawingNote(id, title, imageData, createdDate, modifiedDate);

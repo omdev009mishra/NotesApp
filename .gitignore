@@ -30,3 +30,6 @@ bin/
 
 ### Java ###
 *.class
+
+### Database ###
+*.db
